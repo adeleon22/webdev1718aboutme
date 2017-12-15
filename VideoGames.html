@@ -1,0 +1,75 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+body {
+    background-color: rgb(80, 162, 224);
+}
+.orange-text {
+        color: orange;
+        font-size: 32px ;
+        font-style:bold;
+        font-family:Roboto;
+    }    
+      p1 {
+        font-size:16px;
+        font-family:Roboto;
+      }
+.list {
+    font-family:Roboto;
+}
+    .thin-silver-border {
+        border-color:silver;
+        border-width:10px;
+        border-style:solid;
+    }
+.smaller-image {
+    width:915px;
+}
+</style>
+<center><h1 class="orange-text">Video Games</h1></center>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head> 
+
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">About Me</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="AboutMe.html">Home</a></li>
+      <li><a href="ReadingWords.html">Reading Words</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav> 
+<p1>Playing video games, like TF2 and Overwatch, is an activity I do to relax or do during my free time.  Many other people do this with video games also.  This activity is one of the most popular past times of present day.</p1>
+<div>
+    <p class="list">Read World Connections</p>
+    <ul>
+        <li class="list">Video games are a major industry in the 21st Century</li>
+        <li class="list">Many other people play video games as a hobby. A place where people share their experiences can be found <a href="reddit.com/r/gaming">here.</a></li>
+        <li class="list">Many of the popular youtubers are gamers.  An example is <a href="youtube.com/user/VanossGaming" target="_blank">Vanoss.</a></li>
+        <li class="list">Team Fortress has an annual charity event called <a href="https://tipofthehats.org/" target="_blank"> Tip of the Hats. </a></li>
+        <li class="list">Overwatch won <a href="https://www.theverge.com/2017/5/17/15649560/overwatch-one-year-anniversary-new-event-game-of-the-year-edition" target="_blank">Game of the Year 2017.</a></li>
+    </ul>
+</div>
+
+<a href="#"><img class="smaller-image thin-silver-border" src="https://pre00.deviantart.net/d99d/th/pre/i/2017/224/1/0/tip_of_the_hats_2017___promo_poster_by_uberchain-dbjv03i.png"></a>
+<a href="#"><img class="smaller-image thin-silver-border" src="https://www.pcgamesn.com/sites/default/files/overwatch%20game%20of%20the%20year%20edition.jpg"></a>
+<p2>What's your favorite game of all time?</p2>
+  <label><input type="checkbox" name="genre"> Action</label>
+  <label><input type="checkbox" name="genre"> Adventure</label>
+  <label><input type="checkbox" name="genre"> MMO</label>
+  <label><input type="checkbox" name="genre"> RPG</label>
+  <label><input type="checkbox" name="genre"> Simulation</label>
+  <label><input type="checkbox" name="genre"> Strategy</label>
+    <input type="text" placeholder="Video Game Name" required>
+  <button type="submit">Submit</button>
