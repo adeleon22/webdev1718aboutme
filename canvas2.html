@@ -5,7 +5,7 @@
       
     }
         body {
-          background-color:#29a329;
+          background-color:#F8D032;
         }
     </style>
 
@@ -22,47 +22,44 @@ var canvasWidth = mainCanvas.width;
 var canvasHeight = mainCanvas.height;
 
 var angle = 0;
+var angle2= 0;
+var angle3= 0;
 
 function drawCircle() {
     mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
-    mainContext.fillStyle = "#ffcc00";
+    mainContext.fillStyle = "#314FA7";
     mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
     
     mainContext.beginPath();
-    var radius = 5 + (canvasHeight+canvasWidth)/6 * Math.abs(Math.cos(angle));
+    var radius = 75+ (canvasHeight+canvasWidth)/6 * Math.abs(Math.cos(angle));
     mainContext.arc(canvasWidth/2, canvasHeight/2, radius, 0, Math.PI * 2);
     mainContext.closePath();
-    mainContext.fillStyle = "#29a329";
+    mainContext.fillStyle="#F89E32"
     mainContext.fill();
-    angle+=Math.PI / 64 ;
+     
+    mainContext.beginPath();
+    var radius = 50+ (canvasHeight+canvasWidth)/6 * Math.abs(Math.cos(angle2));
+    mainContext.arc(canvasWidth/2, canvasHeight/2, radius, 0, Math.PI * 2);
+    mainContext.closePath();
+    mainContext.fillStyle = "#F8D032";
+    mainContext.fill();
+    
+     mainContext.beginPath();
+    var radius = 25+ (canvasHeight+canvasWidth)/6 * Math.abs(Math.cos(angle3));
+    mainContext.arc(canvasWidth/2, canvasHeight/2, radius, 0, Math.PI * 2);
+    mainContext.closePath();
+    mainContext.fillStyle = "#314FA7";
+    mainContext.fill();
+    
+    angle+=Math.PI / Math.floor((Math.random() * 100) + 1); ;
+    angle2+=Math.PI/ Math.floor((Math.random() * 100) + 1); ;
+    angle3+=Math.PI/ Math.floor((Math.random() * 100) + 1); ;
     requestAnimationFrame(drawCircle);
 }
+
+    
 drawCircle();
 
-function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-}
-
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    
-    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-        dx = -dx;
-    }
-    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-        dy = -dy;
-    }
-    
-    x += dx;
-    y += dy;
-}
-
-setInterval(draw, 10);
 
 
     </script>
